@@ -1,71 +1,40 @@
+import Hero from './components/Hero'
+import Features from './components/Features'
+import StoryStrip from './components/StoryStrip'
+import Footer from './components/Footer'
+import './index.css'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="min-h-screen bg-[#F9F7F2]">
+      {/* custom font classes */}
+      <style>{`
+        .font-serif-display { font-family: Georgia, 'Times New Roman', serif; letter-spacing: -0.01em; }
+      `}</style>
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
+      {/* top notice bar with warm clay */}
+      <div className="text-center text-sm py-2" style={{ backgroundColor: '#D98C52', color: '#0A2A43' }}>
+        Home Ed Coach — calm guidance for personalised learning
+      </div>
 
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
+      <Hero />
+      <Features />
+      <StoryStrip />
 
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+      {/* reassurance block */}
+      <section className="relative bg-white">
+        <div className="max-w-5xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-serif-display text-3xl text-[#0A2A43]">Calm, human, and grounded in real education</h2>
+          <p className="mt-4 text-lg text-[#1A1C1D]/80 max-w-3xl mx-auto">We’re educators, parents and mentors. We pair warm expertise with tools that feel handcrafted — never corporate — so your family’s learning can flourish.</p>
+          <div className="mt-8 inline-flex gap-3">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CFE7F5]/60 text-[#0A2A43]">SEN‑aware</span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A7DCA5]/60 text-[#0A2A43]">Child‑led</span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E7B7C8]/60 text-[#0A2A43]">Gently structured</span>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   )
 }
